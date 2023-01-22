@@ -30,7 +30,7 @@ class _CompassState extends State<Compass> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Material App',
+      title: 'Commpass App',
       home: Scaffold(),
     );
   }

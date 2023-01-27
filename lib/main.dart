@@ -44,4 +44,15 @@ class _CompassState extends State<Compass> {
       ),
     );
   }
+
+  //compass widget commerce
+
+  //permission sheet widget commerce
+  Widget _buildPermissionSheet() {
+    return Center(
+      child: ElevatedButton(
+        child: Text('Request Permission'),
+      ),
+    );
+  }
 }

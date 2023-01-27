@@ -28,10 +28,12 @@ class _CompassState extends State<Compass> {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Commpass App',
-      home: Scaffold(),
+      home: Scaffold(body: Builder(builder: (context){
+
+      }),),
     );
   }
 }

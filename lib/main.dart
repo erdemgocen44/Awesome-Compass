@@ -47,6 +47,12 @@ class _CompassState extends State<Compass> {
 
   //compass widget commerce
 
+  Widget _buildCompass() {
+    return Container(
+      child: Text('Compass is Here'),
+    );
+  }
+
   //permission sheet widget commerce
   Widget _buildPermissionSheet() {
     return Center(

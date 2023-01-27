@@ -28,12 +28,20 @@ class _CompassState extends State<Compass> {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Commpass App',
-      home: Scaffold(body: Builder(builder: (context){
-
-      }),),
+      home: Scaffold(
+        body: Builder(
+          builder: (context) {
+            if (_hasPermissions) {
+              return _buildCompass();
+            } else {
+              return _buildPermissionSheet();
+            }
+          },
+        ),
+      ),
     );
   }
 }

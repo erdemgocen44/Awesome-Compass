@@ -57,7 +57,7 @@ class _CompassState extends State<Compass> {
   Widget _buildPermissionSheet() {
     return Center(
       child: ElevatedButton(
-        child: const Text('Request Permission'),
+        child: const Text('Request Permission ok!'),
         onPressed: () {
           Permission.locationWhenInUse.request().then((value) {
             _fetchPermissionStatus();

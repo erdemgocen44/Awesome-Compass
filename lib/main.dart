@@ -49,12 +49,12 @@ class _CompassState extends State<Compass> {
   //compass widget commerce
 
   Widget _buildCompass() {
-    StreamBuilder<CompassEvent> (stream: FlutterCompass.events,
+    StreamBuilder<CompassEvent>(
+      stream: FlutterCompass.events,
       builder: (context, snapshot) {
-if (snapshot.hasError) {
-  return Text(data)
-  
-}
+        if (snapshot.hasError) {
+          return Text('Error reading heading: ${snapshot.error}');
+        }
       },
     );
   }

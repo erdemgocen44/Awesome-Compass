@@ -54,8 +54,8 @@ class _CompassState extends State<Compass> {
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Text('Error reading heading: ${snapshot.error}');
-        }if (condition) {
-          
+        }if (snapshot.connectionState==ConnectionState.waiting) {
+          return const Center(child: ,)
         }
       },
     );

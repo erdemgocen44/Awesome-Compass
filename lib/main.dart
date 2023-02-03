@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_compass/flutter_compass.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 void main() => runApp(const Compass());
@@ -48,10 +49,13 @@ class _CompassState extends State<Compass> {
   //compass widget commerce
 
   Widget _buildCompass() {
-    return Center(
-      child: Container(
-        child: Image.asset('assets/images/compass.png'),
-      ),
+    StreamBuilder<CompassEvent> (stream: FlutterCompass.events,
+      builder: (context, snapshot) {
+if (snapshot.hasError) {
+  return Text(data)
+  
+}
+      },
     );
   }
 

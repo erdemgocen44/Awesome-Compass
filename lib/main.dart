@@ -52,14 +52,22 @@ class _CompassState extends State<Compass> {
     return StreamBuilder<CompassEvent>(
       stream: FlutterCompass.events,
       builder: (context, snapshot) {
+//add error message
+
         if (snapshot.hasError) {
           return Text('Error reading heading: ${snapshot.error}');
         }
+
+        //add loading...
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(
             child: CircularProgressIndicator(),
           );
         }
+
+        double? direction = snapshot.data!.heading;
+
+        
       },
     );
   }

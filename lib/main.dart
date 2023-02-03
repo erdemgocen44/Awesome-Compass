@@ -67,7 +67,26 @@ class _CompassState extends State<Compass> {
 
         double? direction = snapshot.data!.heading;
 
-        
+        //if direction is null==then device does not support the sensor
+
+        if (direction == null) {
+          return const Center(
+            child: Text('Device does not have sensors'),
+          );
+        }
+        //return compass
+
+        return Center(
+          child: Container(
+            child: Padding(
+              padding: const EdgeInsets.all(25),
+              child: Image.asset(
+                'assets/images/compass.png',
+                color: Colors.black,
+              ),
+            ),
+          ),
+        );
       },
     );
   }

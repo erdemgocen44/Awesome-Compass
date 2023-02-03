@@ -48,8 +48,10 @@ class _CompassState extends State<Compass> {
   //compass widget commerce
 
   Widget _buildCompass() {
-    return Container(
-      child: Text('Compass is Here'),
+    return Center(
+      child: Container(
+        child: Image.asset('assets/images/compass.png'),
+      ),
     );
   }
 
@@ -57,7 +59,7 @@ class _CompassState extends State<Compass> {
   Widget _buildPermissionSheet() {
     return Center(
       child: ElevatedButton(
-        child: const Text('Request Permission ok!'),
+        child: const Text('Request Permission'),
         onPressed: () {
           Permission.locationWhenInUse.request().then((value) {
             _fetchPermissionStatus();

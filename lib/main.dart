@@ -71,7 +71,7 @@ class _CompassState extends State<Compass> {
 
         if (direction == null) {
           return const Center(
-            child: Text('Device does not have sensors'),
+            child: Text('Device does not have sensors!'),
           );
         }
         //return compass

@@ -80,9 +80,11 @@ class _CompassState extends State<Compass> {
           child: Container(
             child: Padding(
               padding: const EdgeInsets.all(25),
-              child: Image.asset(
-                'assets/images/compass.png',
-                color: Colors.black,
+              child: Transform.rotate(angle: ,
+                child: Image.asset(
+                  'assets/images/compass.png',
+                  color: Colors.black,
+                ),
               ),
             ),
           ),

@@ -1,3 +1,4 @@
+import 'package:awesome_compass/neu_circle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_compass/flutter_compass.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -77,17 +78,13 @@ class _CompassState extends State<Compass> {
         }
         //return compass
 
-        return Center(
-          child: Container(
-            child: Padding(
-              padding: const EdgeInsets.all(25),
-              child: Transform.rotate(
-                angle: direction * (math.pi / 180) * -1,
-                child: Image.asset(
-                  'assets/images/compass.png',
-                  color: Colors.black,
-                ),
-              ),
+        return NeuCircle(
+          child: Transform.rotate(
+            angle: direction * (math.pi / 180) * -1,
+            child: Image.asset(
+              'assets/images/compass.png',
+              color: Colors.white,
+              fit: BoxFit.fill,
             ),
           ),
         );

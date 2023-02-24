@@ -34,8 +34,10 @@ class NeuCircle extends StatelessWidget {
             Colors.blueAccent.shade400,
             Colors.blueAccent.shade700,
           ],
+          stops: [0.1, 0.3, 0.8, 1],
         ),
       ),
+      child: child,
     );
   }
 }

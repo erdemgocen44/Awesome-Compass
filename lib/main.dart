@@ -82,7 +82,7 @@ class _CompassState extends State<Compass> {
             child: Padding(
               padding: const EdgeInsets.all(25),
               child: Transform.rotate(
-                angle: direction * (math.pi),
+                angle: direction * (math.pi / 180) * -1,
                 child: Image.asset(
                   'assets/images/compass.png',
                   color: Colors.black,

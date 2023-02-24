@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_compass/flutter_compass.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'dart:math' as math;
 
 void main() => runApp(const Compass());
 
@@ -80,7 +81,8 @@ class _CompassState extends State<Compass> {
           child: Container(
             child: Padding(
               padding: const EdgeInsets.all(25),
-              child: Transform.rotate(angle: ,
+              child: Transform.rotate(
+                angle: direction * (math.pi),
                 child: Image.asset(
                   'assets/images/compass.png',
                   color: Colors.black,
